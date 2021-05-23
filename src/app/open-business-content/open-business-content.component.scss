@@ -1,0 +1,62 @@
+.container-two {
+  height: 100vh;
+  background-image: url(/../../assets/images/sol_wave_bg.svg);
+  background-repeat: no-repeat;
+  mat-card {
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 30px #2321321f;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    opacity: 1;
+    height: 138px;
+    width: 284px;
+    strong {
+      font-weight: 500 !important;
+    }
+    img {
+      width: 48px;
+    }
+    p {
+      color: #999999;
+    }
+  }
+  mat-card:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 30px #2321321f;
+    border: 1px solid #ffffff;
+    background: url(/../../assets/images/Rectangle2.svg) transparent 0% 0%
+      no-repeat padding-box;
+    // background-repeat:no-repeat;
+    border-radius: 20px;
+    opacity: 1;
+    color: white;
+    background-position: center;
+    height: 138px;
+    width: 284px;
+    img {
+      width: 48px;
+    }
+    p {
+      color: #fff;
+      font-family: "Montserrat";
+    }
+  }
+  .partation-two {
+    span {
+      font-family: "Montserrat";
+      font-size: 28px;
+      line-height: 32px;
+      word-spacing: 4px;
+    }
+    p {
+      color: #777777;
+      font-family: "Montserrat";
+    }
+    button {
+      box-shadow: 0px 0px 20px #00000033;
+      border: 2px solid #663399;
+      border-radius: 24px;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.container {
+  height: 100vh;
+  .container-one {
+    .set-img {
+      position: absolute;
+      top: -134px;
+      right: -77px;
+      font-size: 18px;
+    }
+    .set-img-two {
+      position: absolute;
+      bottom: 192px;
+      left: -162px;
+      font-size: 18px;
+      img {
+        width: 45%;
+        opacity: 1;
+        transform: rotate(180deg);
+      }
+    }
+    .container-two {
+      .set-img-three {
+        bottom: 0px;
+        position: fixed;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

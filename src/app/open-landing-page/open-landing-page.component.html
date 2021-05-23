@@ -1,0 +1,118 @@
+<div
+  fxLayout="row"
+  fxLayoutAlign="space-around"
+  fxLayout.sm="column"
+  fxFlex="100"
+  class="content"
+>
+  <div
+    fxFlex="50"
+    fxLayout="row"
+    fxLayoutGap="40px"
+    fxLayoutAlign="start  space-between center"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutGap="40px"
+      gdAlignColumns="start start"
+      fxLayoutAlign="start end"
+      fxLayoutGap="40px"
+      class="partation-one"
+    >
+      <span
+        >We make it Super <br />
+        Simple</span
+      >
+      <img fxLayoutAlign="start" src="assets/images/Line 3.svg" />
+      <br />
+      <br />
+      <img src="/assets/images/collect_img-video.png" width="500" />
+      <img
+        class="account-dot"
+        src="/assets/images/accounting_dots.svg"
+        width="250"
+      />
+    </div>
+  </div>
+  <div
+    fxFlex="50"
+    fxLayout="row"
+    fxLayoutAlign="center  space-between end"
+    class="partation-two"
+    fxLayout.sm="column"
+  >
+    <div
+      fxLayout="row"
+      fxLayoutGap="40px"
+      fxLayoutAlign="center space-between"
+      fxLayoutGap="10px"
+      fxFlex="48"
+    >
+      <mat-card fxLayout="column" fxLayoutGap="16px" fxFill>
+        <mat-card-header>
+          <mat-card-title>Eligibility Calculator</mat-card-title>
+        </mat-card-header>
+        <sup>Monthly Income</sup>
+        <span>₹ {{ monthlyIncome }}</span>
+
+        <mat-slider
+          min="100000"
+          max="3000000"
+          thumbLabel="false"
+          [(ngModel)]="monthlyIncome"
+          #slider
+          (change)="changeMonthlyIncome()"
+        ></mat-slider>
+        <div fxLayoutAlign="start end" fxLayoutAlign="row" fxFlex="100">
+          <sub fxFlexAlign="start" fxFlex="50">₹ 100000</sub>
+          <sub fxFlexAlign="end start" fxFlex="50">₹ 3000000</sub>
+        </div>
+        <sup>Monthly Expense</sup>
+        <span>₹ {{ monthlyExpense }}</span>
+        <mat-slider
+          min="1"
+          max="100000"
+          thumbLabel="false"
+          [(ngModel)]="monthlyExpense"
+          #sliderTwo
+          (change)="changeMonthlyExpense()"
+        ></mat-slider>
+        <mat-form-field appearance="fill">
+          <mat-label>Repayment Tenure</mat-label>
+          <mat-select [(value)]="selectedValue">
+            <mat-option *ngFor="let month of tenure" [value]="month.viewValue">
+              {{ month.value }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div fxLayoutAlign="center end" fxLayoutAlign="column" fxFlex="100">
+          <span fxFlex="90">Do you have any existing loans?</span>
+          <mat-slide-toggle
+            fxFlex="10"
+          ></mat-slide-toggle>
+        </div>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>EMI of existing loan (optional)</mat-label>
+            <input matInput placeholder="loan amount." value="₹ 15000" />
+          </mat-form-field>
+        </form>
+      </mat-card>
+      <div fxFlexAlign="center">
+        <mat-card
+          fxLayout="column"
+          fxLayoutAlign="center"
+          fxLayoutGap="20px"
+          fxFlexFill
+        >
+          <label>Loan Amout</label>
+          <span>₹ 100000</span>
+          <label>Your EMI will be</label>
+          <span>₹ 150000</span>
+          <button mat-stroked-button>Get Money</button>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<img class="account-dot" src="/assets/images/accounting_dots.svg" width="250" />
