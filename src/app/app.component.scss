@@ -9,13 +9,13 @@
     }
     .set-img-two {
       position: absolute;
-      bottom: 192px;
+      bottom: 120px;
       left: -162px;
       font-size: 18px;
       img {
-        width: 45%;
+        width: 40%;
         opacity: 1;
-        transform: rotate(180deg);
+        position: relative;
       }
     }
     .container-two {
